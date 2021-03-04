@@ -3,7 +3,12 @@ import React from 'react';
 const Left = ()=>{
     return(
         <div className="header-left">
-            <h1 className="left-h1 h1">
+            <span className="span-breaking">
+                    Breaking
+                    &nbsp;
+                </span>
+            <h1 className="left-h1" title="Breaking News">
+                
                 News
             </h1>
         </div>

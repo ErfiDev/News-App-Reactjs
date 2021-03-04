@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchIcon from '@material-ui/icons/Search';
 
 const Input = ()=>{
     return(
@@ -6,7 +7,7 @@ const Input = ()=>{
             <div className="center-main">
                 <div className="center-main-left">
                     <span>
-                        🤞
+                        <SearchIcon fontSize="inherit" color="inherit" />
                     </span>
                 </div>
 
@@ -14,7 +15,8 @@ const Input = ()=>{
                     <input 
                         type="text" 
                         id="input" 
-                        autocomplete="off"    
+                        autocomplete="off"   
+                        placeholder="Search by title, auther, url and..." 
                     />
                 </div>
             </div>
