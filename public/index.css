@@ -10,6 +10,7 @@
     height: 100vh;
     overflow: scroll;
     overflow-x: hidden;
+    background-color: #edeef7;
 }
 #root::-webkit-scrollbar{
     width: 10px;
