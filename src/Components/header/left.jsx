@@ -4,11 +4,10 @@ const Left = ()=>{
     return(
         <div className="header-left">
             <span className="span-breaking">
-                    Breaking
-                    &nbsp;
-                </span>
+                Breaking
+                &nbsp;
+            </span>
             <h1 className="left-h1" title="Breaking News">
-                
                 News
             </h1>
         </div>
