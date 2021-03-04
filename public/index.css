@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#root{
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#root::-webkit-scrollbar{
+    width: 10px;
+}
+#root::-webkit-scrollbar-button{
+    width: 0;
+    height: 0;
+}
+#root::-webkit-scrollbar-thumb{
+    width: 100%;
+    background-color: rgb(57, 250, 31);
+}
+#root::-webkit-scrollbar-thumb:focus{
+    background-color: rgba(57, 250, 31, 0.603);
+}

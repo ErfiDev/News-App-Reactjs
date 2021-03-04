@@ -12,6 +12,6 @@ const Header = ()=>{
             <Right />
         </header>
     );
-}
+};
 
 export default Header;
