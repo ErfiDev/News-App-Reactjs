@@ -9,7 +9,14 @@ const NewDiv = ()=>{
     return(
         <div className="news-div">
             {article.map(item => (
-                <Article />
+                <Article
+                    imgURL={item.urlToImage}
+                    Title={item.title}
+                    Description={item.description}
+                    Auther={item.auther}
+                    Content={item.content}
+                    PublishDate={item.publishedAt} 
+                />
             ))}
         </div>
     );

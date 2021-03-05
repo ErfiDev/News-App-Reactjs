@@ -14,6 +14,7 @@
 }
 #root::-webkit-scrollbar{
     width: 9px;
+    background-color: #b1f3ff;
 }
 #root::-webkit-scrollbar-button{
     width: 0;
@@ -21,8 +22,5 @@
 }
 #root::-webkit-scrollbar-thumb{
     width: 100%;
-    background-color: rgb(0, 0, 0);
-}
-#root::-webkit-scrollbar-thumb:focus{
-    background-color: rgb(0, 0, 0);
+    background-color: #ff005c;
 }

@@ -6,12 +6,15 @@ $bc: "background-color";
     justify-content: $justify;
     align-items: $align;
 }
-
 @mixin grid($columns , $rows)
 {
     display: grid;
     grid-template-columns: $columns;
     grid-template-rows: $rows;
+}
+@mixin overflow($value)
+{
+    overflow: $value;
 }
 
 
@@ -44,13 +47,75 @@ $bc: "background-color";
     flex-wrap: wrap;
 
     .article{
-        width: 320px;
-        height: 350px;
-        #{$bc}: blue;
-        margin-top: 10px;
+        width: 350px;
+        min-height: 400px;
+        height: auto;
+        margin-top: 25px;
+        @include grid(1fr , 1fr 20% 10%);
+        box-shadow: -2px 5px 24px -11px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -2px 5px 24px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: -2px 5px 24px -11px rgba(0,0,0,0.75);
+
+        .image-container{
+            @include overflow(hidden);
+            cursor: pointer;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.4s ease-out;
+            }
+            &:hover img{
+                transform: scale(1.1);
+            }
+        }
+
+        .title-container{
+            @include grid(1fr , 1fr);
+            p{
+                font-size: 1.1rem;
+                margin: 0;
+                padding: 10px;
+                text-align: left;
+                text-transform: capitalize;
+                transition: all 0.4s ease-out;
+                cursor: pointer;
+                @include overflow(scroll);
+                overflow-x: hidden;
+                &::-webkit-scrollbar{
+                    width: 4px;
+                }
+                &::-webkit-scrollbar-button{
+                    width: 0;
+                    height: 0;
+                }
+                &::-webkit-scrollbar-thumb{
+                    width: 100%;
+                    background-color: #ffc400;
+                }
+                &:hover{
+                    color: rgb(0, 47, 255);
+                }
+            }
+        }
+
+        .publish-container{
+            @include grid(1fr , 1fr);
+            p{
+                margin: auto auto;
+                text-align: center;
+            }
+        }
     }
 }
 
+@media only screen and (max-width: 717px)
+{
+    .article{
+        width: 85% !important;
+        min-height: 500px !important;
+    }
+}
 @media only screen and (max-width: 460px)
 {
     .not-news{

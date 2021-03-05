@@ -32,12 +32,76 @@
   flex-wrap: wrap;
 }
 .news-div .article {
-  width: 320px;
-  height: 350px;
-  background-color: blue;
-  margin-top: 10px;
+  width: 350px;
+  min-height: 400px;
+  height: auto;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 20% 10%;
+  box-shadow: -2px 5px 24px -11px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px 5px 24px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 5px 24px -11px rgba(0, 0, 0, 0.75);
+}
+.news-div .article .image-container {
+  overflow: hidden;
+  cursor: pointer;
+}
+.news-div .article .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease-out;
+}
+.news-div .article .image-container:hover img {
+  transform: scale(1.1);
+}
+.news-div .article .title-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.news-div .article .title-container p {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+  text-transform: capitalize;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.news-div .article .title-container p::-webkit-scrollbar {
+  width: 4px;
+}
+.news-div .article .title-container p::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+.news-div .article .title-container p::-webkit-scrollbar-thumb {
+  width: 100%;
+  background-color: #ffc400;
+}
+.news-div .article .title-container p:hover {
+  color: #002fff;
+}
+.news-div .article .publish-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.news-div .article .publish-container p {
+  margin: auto auto;
+  text-align: center;
 }
 
+@media only screen and (max-width: 717px) {
+  .article {
+    width: 85% !important;
+    min-height: 500px !important;
+  }
+}
 @media only screen and (max-width: 460px) {
   .not-news {
     font-size: 1rem;
