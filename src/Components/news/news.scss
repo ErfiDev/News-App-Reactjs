@@ -1,3 +1,23 @@
 $bc: "background-color";
 
+@mixin flex($justify , $align)
+{
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
 
+@mixin grid($columns , $rows)
+{
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
+
+#main-news{
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    #{$bc}: #edeef7;
+}
