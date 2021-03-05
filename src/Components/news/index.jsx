@@ -1,13 +1,22 @@
 import React from 'react';
-// import NewsDiv from './news-div';
+import {useSelector} from 'react-redux';
+import {isEmpty} from 'lodash';
+import NewsDiv from './news-div';
 import NotNews from './notNews';
 
 import "./Compiled/news.css";
 
 const NewContainer = ()=>{
+
+    const Article = useSelector(state => state.Article);
+
     return(
         <main id="main-news">
-            <NotNews />
+            {isEmpty(Article) ? (
+                <NotNews />
+            ) : (
+                <NewsDiv />
+            )}
         </main>
     );
 };

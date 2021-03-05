@@ -19,4 +19,32 @@
   padding-right: 20px;
   text-align: center;
   color: rgba(0, 0, 0, 0.432);
+  font-size: 1.5rem;
+}
+
+.news-div {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.news-div .article {
+  width: 320px;
+  height: 350px;
+  background-color: blue;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 460px) {
+  .not-news {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 356px) {
+  .not-news {
+    font-size: 0.8rem;
+  }
 }

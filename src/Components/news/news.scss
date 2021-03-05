@@ -23,7 +23,6 @@ $bc: "background-color";
     @include flex(center , center);
 }
 
-
 .not-news{
     min-width: 500px;
     width: auto;
@@ -33,4 +32,34 @@ $bc: "background-color";
     padding-right: 20px;
     text-align: center;
     color: rgba(0, 0, 0, 0.432);
+    font-size: 1.5rem;
+}
+
+
+.news-div{
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    @include flex(space-around , flex-start);
+    flex-wrap: wrap;
+
+    .article{
+        width: 320px;
+        height: 350px;
+        #{$bc}: blue;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 460px)
+{
+    .not-news{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 356px)
+{
+    .not-news{
+        font-size: 0.8rem;
+    }
 }
