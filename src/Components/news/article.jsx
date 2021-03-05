@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const NewDiv = ({imgURL , Description , Auther , Title , PublishDate , Content})=>{
+const NewDiv = ({imgURL , Title , PublishDate})=>{
     return(
         <div className="article">
             <div className="image-container">
