@@ -20,4 +20,17 @@ $bc: "background-color";
     min-height: 500px;
     height: auto;
     #{$bc}: #edeef7;
+    @include flex(center , center);
+}
+
+
+.not-news{
+    min-width: 500px;
+    width: auto;
+    height: 200px;
+    @include flex(center , center);
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.432);
 }
