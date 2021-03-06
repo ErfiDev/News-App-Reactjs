@@ -86,6 +86,9 @@
 .news-div .article .title-container p:hover {
   color: #002fff;
 }
+.news-div .article .title-container p a {
+  text-decoration: none;
+}
 .news-div .article .publish-container {
   display: grid;
   grid-template-columns: 1fr;

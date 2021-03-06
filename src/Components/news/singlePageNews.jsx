@@ -46,7 +46,7 @@ const SinglePageNews = ()=>{
             </div>
 
             <div className="full-content">
-                <a href="#" target="_blank">
+                <a href="https://google.com">
                     Click to see the full News
                 </a>
             </div>

@@ -1,19 +1,23 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-
-const NewDiv = ({imgURL , Title , PublishDate , id})=>{
+const NewDiv = ({imgURL , Title , PublishDate})=>{
     return(
         <div className="article">
             <div className="image-container">
-                <img 
-                    alt={Title} 
-                    src={imgURL}
-                />
+                <Link to={Title}>
+                    <img 
+                        alt={Title} 
+                        src={imgURL}
+                    />
+                </Link>
             </div>
 
             <div className="title-container">
                 <p>
-                    {Title} 
+                    <Link to={Title}>
+                        {Title} 
+                    </Link>
                 </p>
             </div>
 
