@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import {isEmpty} from 'lodash';
 import NewsDiv from './news-div';
 import NotNews from './notNews';
+import SinglePage from './singlePageNews';
 
 import "./Compiled/news.css";
 
@@ -12,11 +13,13 @@ const NewContainer = ()=>{
 
     return(
         <main id="main-news">
-            {isEmpty(Article) ? (
+            {/* {isEmpty(Article) ? (
                 <NotNews />
             ) : (
                 <NewsDiv />
-            )}
+            )} */}
+
+            <SinglePage />
         </main>
     );
 };

@@ -5,7 +5,7 @@ const getNewsAction = ()=>{
     return async (dispatch , getState)=>{
         try{
             const value = getState().input;
-            const url = `https://newsapi.org/v2/everything?q=${value}&apiKey=ef2bb3c2614b45b9be62bd52f005c85f`;
+            const url = `https://newsapi.org/v2/everything?q=${value}&apiKey=ef2bb3c2614b45b9be62bd52f005c85f&language=en&pageSize=40`;
             const response = await service.get(url);
             const {data} = await response;
             const {articles} = await data;
