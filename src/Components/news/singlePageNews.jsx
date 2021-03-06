@@ -26,25 +26,29 @@ const SinglePageNews = ()=>{
             <div className="article-details-container">
                 <ul className="details-list">
                     <li>
-                    https://www.facebook.com/bbcnews
+                        Auther: https://www.facebook.com/bbcnews
                     </li>
 
                     <li>
-                    2021-03-03T10:08:29Z
+                        2021-03-03T10:08:29Z
                     </li>
 
                     <li>
-                    BBC News
+                        From BBC News
                     </li>
                 </ul>
             </div>
 
             <div className="news-content">
-            image captionUS-led coalition forces are stationed at Al Asad air base to combat the Islamic State group Ten rockets have hit a base hosting US-led coalition forces in western Iraq. Iraq's military… [+1392 chars]
+                <p>
+                image captionUS-led coalition forces are stationed at Al Asad air base to combat the Islamic State group Ten rockets have hit a base hosting US-led coalition forces in western Iraq. Iraq's military… [+1392 chars]
+                </p>
             </div>
 
             <div className="full-content">
-                Link
+                <a href="#" target="_blank">
+                    Click to see the full News
+                </a>
             </div>
         </div>
     );
