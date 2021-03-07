@@ -1,5 +1,4 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
 import Layout from '../layout';
 
 import "./Compiled/news.css";
@@ -13,4 +12,4 @@ const NewContainer = ()=>{
     );
 };
 
-export default withRouter(NewContainer);
+export default NewContainer;
