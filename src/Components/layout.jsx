@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import {isEmpty} from 'lodash';
 import NotNews from './news/notNews';
 import NewsDiv from './news/news-div';
+// import SinglePageNews from './news/singlePageNews';
 
 const Layout = ()=>{
 
