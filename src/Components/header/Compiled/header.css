@@ -56,7 +56,7 @@
 #header .header-center .center-main .center-main-left:hover {
   background-color: rgba(192, 189, 189, 0.411);
 }
-#header .header-center .center-main .center-main-left span {
+#header .header-center .center-main .center-main-left a {
   display: flex;
   justify-content: center;
   align-items: center;

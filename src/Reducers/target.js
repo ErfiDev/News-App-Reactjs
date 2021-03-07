@@ -1,11 +1,11 @@
-function Target(state = "" , action) {
+function Target(state = [] , action) {
     switch(action.type) 
     {
         case "SET_TARGET":
             return action.payload;
 
         case "CLEAR_TARGET":
-            return state = "";
+            return state = [];
 
         default: return state;
     }

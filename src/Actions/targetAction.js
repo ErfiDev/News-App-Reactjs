@@ -1,9 +1,12 @@
-export function setTargetAction(value)
+export function setTargetAction(e)
 {
-    return async (dispatch)=>{
-        const data = value;
+    return async (dispatch , getState) => {
+        const value = e;
+        const data = getState().enArticle;
+        const filter = data.filter(item => item._id === value);
 
-        await dispatch({type: "SET_TARGET" , payload: data});
+
+        await dispatch({type: "SET_TARGET" , payload: filter});
     }
 }
 

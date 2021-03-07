@@ -110,7 +110,8 @@
   flex-direction: column;
 }
 .single-page .single-page-description-container {
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .single-page .single-page-description-container p {
   text-transform: capitalize;
@@ -118,7 +119,7 @@
   padding-left: 30px;
   padding-right: 20px;
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   border-left: dotted #ffb700 7px;
 }
 .single-page .single-page-image-container {
@@ -131,7 +132,6 @@
   object-fit: cover;
 }
 .single-page .single-page-title-container {
-  margin-top: 70px;
   margin-bottom: 30px;
 }
 .single-page .single-page-title-container h1 {
@@ -180,12 +180,19 @@
   text-decoration: capitalize;
   font-size: 1.3rem;
 }
-.single-page .full-content {
-  margin-top: 50px;
-}
 .single-page .full-content a {
   text-decoration: none;
   font-size: 1.5rem;
+}
+.single-page h2[back=backtoHome] {
+  margin-top: 70px;
+  border-top: dotted 7px #ffb70080;
+  padding-top: 15px;
+}
+.single-page h2[back=backtoHome] a {
+  transition: all 0.5s ease-out;
+  text-decoration: none;
+  color: #ffb700;
 }
 
 @media only screen and (max-width: 955px) {
@@ -197,11 +204,12 @@
   }
   .details-list li {
     margin-top: 10px;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
   }
-}
-@media only screen and (max-width: 500px) {
-  .details-list li {
-    font-size: 1rem !important;
+
+  .single-page-image-container {
+    height: 450px !important;
   }
 }
 @media only screen and (max-width: 717px) {
@@ -213,6 +221,23 @@
   .single-page-description-container p {
     font-size: 1.5rem !important;
   }
+
+  .single-page-title-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .single-page-image-container {
+    height: 350px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .details-list li {
+    font-size: 1rem !important;
+  }
+
+  .single-page-image-container {
+    height: 250px !important;
+  }
 }
 @media only screen and (max-width: 460px) {
   .not-news {
@@ -221,6 +246,10 @@
 
   .details-list li {
     font-size: 0.8rem !important;
+  }
+
+  .single-page-description-container p {
+    font-size: 1rem !important;
   }
 }
 @media only screen and (max-width: 356px) {

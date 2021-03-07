@@ -3,6 +3,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import {useDispatch} from 'react-redux';
 import inputAction from '../../Actions/inputAction';
 import {getNewsAction} from '../../Actions/getNews';
+import {Link} from 'react-router-dom';
 
 const Input = ()=>{
 
@@ -11,11 +12,15 @@ const Input = ()=>{
     return(
         <div className="header-center">
             <div className="center-main">
+                
                 <div className="center-main-left">
-                    <span onClick={()=> dis(getNewsAction())}>
-                        <SearchIcon fontSize="inherit" color="inherit" />
-                    </span>
+                    <Link to="/All-News" onClick={()=> dis(getNewsAction())}>
+                        <span>
+                            <SearchIcon fontSize="inherit" color="inherit" />
+                        </span>
+                    </Link>
                 </div>
+                
 
                 <div className="center-main-right">
                     <input 

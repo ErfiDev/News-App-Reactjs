@@ -63,8 +63,7 @@ $bc : "background-color";
                 &:hover{
                     #{$bc}: rgba(192, 189, 189, 0.411);
                 }
-
-                span{
+                a{
                     @include flex(center , center);
                 }
             }

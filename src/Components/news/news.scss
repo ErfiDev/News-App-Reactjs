@@ -122,14 +122,15 @@ $bc: "background-color";
     flex-direction: column;
 
     .single-page-description-container{
-        margin-bottom: 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
         p{
             text-transform: capitalize;
             text-align: left;
             padding-left: 30px;
             padding-right: 20px;
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             border-left: dotted #ffb700 7px;
         }
     }
@@ -145,7 +146,6 @@ $bc: "background-color";
     }
 
     .single-page-title-container{
-        margin-top: 70px;
         margin-bottom: 30px;
         h1{
             text-align: left;
@@ -196,10 +196,20 @@ $bc: "background-color";
     }
 
     .full-content{
-        margin-top: 50px;
         a{
             text-decoration: none;
             font-size: 1.5rem;
+        }
+    }
+
+    h2[back= "backtoHome"]{
+        margin-top: 70px;
+        border-top: dotted 7px #ffb70080;
+        padding-top: 15px;
+        a{
+            transition: all 0.5s ease-out;
+            text-decoration: none;
+            color: #ffb700;
         }
     }
 }
@@ -214,16 +224,13 @@ $bc: "background-color";
         flex-direction: column;
         li{
             margin-top: 10px;
+            padding-left: 25px !important;
+            padding-right: 25px !important;
         }
     }
-}
 
-@media only screen and (max-width: 500px)
-{
-    .details-list{
-        li{
-            font-size: 1rem !important;
-        }
+    .single-page-image-container{
+        height: 450px !important;
     }
 }
 
@@ -239,7 +246,32 @@ $bc: "background-color";
             font-size: 1.5rem !important;
         }
     }
+
+    .single-page-title-container
+    {
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+
+    .single-page-image-container{
+        height: 350px !important;
+    }
 }
+@media only screen and (max-width: 500px)
+{
+    .details-list{
+        li{
+            font-size: 1rem !important;
+        }
+    }
+
+    .single-page-image-container{
+        height: 250px !important;
+    }
+
+}
+
 @media only screen and (max-width: 460px)
 {
     .not-news{
@@ -249,6 +281,12 @@ $bc: "background-color";
     .details-list{
         li{
             font-size: 0.8rem !important;
+        }
+    }
+
+    .single-page-description-container{
+        p{
+            font-size: 1rem !important;
         }
     }
 }
