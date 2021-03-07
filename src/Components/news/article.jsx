@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const NewDiv = ({imgURL , Title , PublishDate})=>{
+const NewDiv = ({imgURL , Title , PublishDate , id})=>{
     return(
         <div className="article">
             <div className="image-container">
-                <Link to={Title}>
+                <Link to={id}>
                     <img 
                         alt={Title} 
                         src={imgURL}
@@ -15,7 +15,7 @@ const NewDiv = ({imgURL , Title , PublishDate})=>{
 
             <div className="title-container">
                 <p>
-                    <Link to={Title}>
+                    <Link to={id}>
                         {Title} 
                     </Link>
                 </p>

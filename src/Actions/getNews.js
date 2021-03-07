@@ -1,7 +1,8 @@
 import service from '../services/httpService';
 import {toast} from 'react-toastify';
+import {v4 as uuidv4} from 'uuid';
 
-const getNewsAction = ()=>{
+export const getNewsAction = ()=>{
     return async (dispatch , getState)=>{
         try{
             const value = getState().input;
@@ -9,8 +10,8 @@ const getNewsAction = ()=>{
             const response = await service.get(url);
             const {data} = await response;
             const {articles} = await data;
-            await dispatch({type: "GET_NEWS" , payload: {data}})
-            await dispatch({type: "GET_ARTICLE" , payload: articles});
+            console.log(articles);
+            await dispatch(getEnArticle(articles));
         }
         catch(err)
         {
@@ -22,4 +23,20 @@ const getNewsAction = ()=>{
     }
 }
 
-export default getNewsAction;
+
+export const getEnArticle = (article)=>{
+    return async dispatch =>{
+        const Copy = [...article];
+
+        let finnaly = [];
+        for(let i = 0; i < article.length; i++)
+        {
+            finnaly.push({
+                _id: uuidv4(),
+                source: Copy[i]
+            });
+        }
+
+        await dispatch({type: "SET" , payload: finnaly});
+    }
+}

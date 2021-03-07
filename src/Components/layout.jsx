@@ -1,19 +1,25 @@
 import React,{Fragment} from 'react';
 import {useSelector} from 'react-redux';
 import {isEmpty} from 'lodash';
-import NewsDiv from './news/news-div';
 import NotNews from './news/notNews';
+import NewsDiv from './news/news-div';
 
 const Layout = ()=>{
 
-    const Article = useSelector(state => state.Article);
+    const Article = useSelector(state => state.enArticle);
 
     return(
         <Fragment>
             {isEmpty(Article) ? (
-            <NotNews />
-            ) : (
+            
+                <NotNews />
+
+            )
+            :
+            (
+                
                 <NewsDiv />
+            
             )}
         </Fragment>
     );

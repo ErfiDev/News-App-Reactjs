@@ -5,15 +5,16 @@ import Article from './article';
 
 const NewDiv = ()=>{
 
-    const article = useSelector(state => state.Article);
+    const EnArticle = useSelector(state => state.enArticle);
 
     return(
         <div className="news-div">
-            {article.map(item => (
-                <Article
-                    imgURL={item.urlToImage}
-                    Title={item.title}
-                    PublishDate={item.publishedAt}
+            {EnArticle.map(item => (
+                <Article 
+                    PublishDate={item.source.publishedAt}
+                    Title={item.source.title}
+                    id={item._id}
+                    imgURL={item.source.urlToImage}
                 />
             ))}
         </div>

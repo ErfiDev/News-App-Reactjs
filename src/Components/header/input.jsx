@@ -2,7 +2,7 @@ import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import {useDispatch} from 'react-redux';
 import inputAction from '../../Actions/inputAction';
-import getNews from '../../Actions/getNews';
+import {getNewsAction} from '../../Actions/getNews';
 
 const Input = ()=>{
 
@@ -12,7 +12,7 @@ const Input = ()=>{
         <div className="header-center">
             <div className="center-main">
                 <div className="center-main-left">
-                    <span onClick={()=> dis(getNews())}>
+                    <span onClick={()=> dis(getNewsAction())}>
                         <SearchIcon fontSize="inherit" color="inherit" />
                     </span>
                 </div>

@@ -1,20 +1,16 @@
 import React from 'react';
-import {Route , Switch} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import Layout from '../layout';
 
 import "./Compiled/news.css";
 
 const NewContainer = ()=>{
 
-    
-
     return(
         <main id="main-news">
-            <Switch>
-                <Route path="/" exact component={Layout} />
-            </Switch>
+            <Layout />
         </main>
     );
 };
 
-export default NewContainer;
+export default withRouter(NewContainer);
