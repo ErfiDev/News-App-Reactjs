@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
-import {clearTargetAction , setTargetAction} from '../../Actions/targetAction';
+import {setTargetAction} from '../../Actions/targetAction';
 
 const NewDiv = ({imgURL , Title , PublishDate , id})=>{
 
@@ -17,7 +17,7 @@ const NewDiv = ({imgURL , Title , PublishDate , id})=>{
             </div>
 
             <div className="title-container">
-                <p onClick={()=> dis(clearTargetAction())}>
+                <p onClick={()=> dis(setTargetAction(id))}>
                     {Title} 
                 </p>
             </div>
