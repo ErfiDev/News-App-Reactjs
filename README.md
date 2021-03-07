@@ -3,7 +3,9 @@
 
 - An app for searching the news of the day
 
-- create by erfanhanifezade
+
+
+###  create by erfanhanifezade
 
 - Technologies used:
 - React
