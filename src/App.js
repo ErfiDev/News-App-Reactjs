@@ -1,5 +1,6 @@
-import React,{Fragment} from 'react';
+import React from 'react';
 import {ToastContainer} from 'react-toastify';
+import {BrowserRouter} from 'react-router-dom';
 import Header from './Components/header/header';
 import News from './Components/news/index';
 
@@ -11,12 +12,12 @@ class App extends React.Component
     render()
     {
         return(
-            <Fragment>
+            <BrowserRouter>
                 <Header />
                 <News />
 
                 <ToastContainer />
-            </Fragment>
+            </BrowserRouter>
         );
     }
 }
