@@ -4,6 +4,9 @@ function Target(state = "" , action) {
         case "SET_TARGET":
             return action.payload;
 
+        case "CLEAR_TARGET":
+            return state = "";
+
         default: return state;
     }
 }
