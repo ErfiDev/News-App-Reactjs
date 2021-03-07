@@ -27,9 +27,9 @@ $bc: "background-color";
 }
 
 .not-news{
-    min-width: 500px;
-    width: auto;
-    height: 200px;
+    width: 100%;
+    min-height: 600px;;
+    height: auto;
     @include flex(center , center);
     padding-left: 20px;
     padding-right: 20px;

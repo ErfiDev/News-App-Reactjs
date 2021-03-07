@@ -9,9 +9,9 @@
 }
 
 .not-news {
-  min-width: 500px;
-  width: auto;
-  height: 200px;
+  width: 100%;
+  min-height: 600px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;

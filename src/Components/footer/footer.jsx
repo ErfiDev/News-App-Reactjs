@@ -1,16 +1,19 @@
 import React from 'react';
 
-import 'footer.css';
+import './footer.css';
 
 const Footer = () => {
     return ( 
         <footer id="footer">
-            <div>
+            <div id="footer-div">
                 <p>
-                    Code, design and copy by: 
+                    Code, design and copy by: &nbsp; 
                     <span id="think">
                         who do you think?
                     </span> 
+                    &nbsp;
+                </p>
+                <p>
                     © 2021 Erfan Hanifezade.
                 </p>
             </div>
@@ -18,7 +21,6 @@ const Footer = () => {
             <h2 id="email-me">
                 EMAIL ME
             </h2>
-
         </footer>
     );
 }
