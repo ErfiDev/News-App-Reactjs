@@ -10,7 +10,6 @@ export const getNewsAction = ()=>{
             const response = await service.get(url);
             const {data} = await response;
             const {articles} = await data;
-            console.log(articles);
             await dispatch(getEnArticle(articles));
         }
         catch(err)
