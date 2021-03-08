@@ -13,7 +13,7 @@
     background-color: #edeef7;
 }
 #root::-webkit-scrollbar{
-    width: 9px;
+    width: 15px;
 }
 #root::-webkit-scrollbar-button{
     width: 0;
@@ -21,5 +21,6 @@
 }
 #root::-webkit-scrollbar-thumb{
     width: 100%;
+    cursor: pointer;
     background-color: #7e5b02f3;
 }

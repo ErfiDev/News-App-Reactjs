@@ -6,7 +6,8 @@ export const getNewsAction = ()=>{
     return async (dispatch , getState)=>{
         try{
             const value = getState().input;
-            const url = `https://newsapi.org/v2/everything?q=${value}&apiKey=ef2bb3c2614b45b9be62bd52f005c85f&language=en&pageSize=40`;
+            const getNowDate = getNowTime();
+            const url = `https://newsapi.org/v2/everything?q=${value}&from=${getNowDate}&sortBy=popularity&apiKey=ef2bb3c2614b45b9be62bd52f005c85f&language=en&pageSize=40`;
             const response = await service.get(url);
             const {data} = await response;
             const {articles} = await data;
@@ -20,6 +21,21 @@ export const getNewsAction = ()=>{
             });
         }
     }
+};
+
+
+function getNowTime(){
+    Date.prototype.yyyymmdd = function() {
+        var mm = this.getMonth() + 1;
+        var dd = this.getDate();
+ 
+        return [this.getFullYear(),
+                (mm>9 ? '' : '0') + mm,
+                (dd>9 ? '' : '0') + dd
+               ].join('-');
+      };
+      var date = new Date();
+      return date.yyyymmdd()
 }
 
 
