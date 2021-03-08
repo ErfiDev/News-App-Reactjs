@@ -7,7 +7,7 @@ export const getNewsAction = ()=>{
         try{
             const value = getState().input;
             const getNowDate = getNowTime();
-            const url = `https://newsapi.org/v2/everything?q=${value}&from=${getNowDate}&sortBy=popularity&apiKey=ef2bb3c2614b45b9be62bd52f005c85f&language=en&pageSize=40`;
+            const url = `https://newsapi.org/v2/everything?q=${value}&from=${getNowDate}&sortBy=popularity&apiKey=ef2bb3c2614b45b9be62bd52f005c85f&language=en&pageSize=100`;
             const response = await service.get(url);
             const {data} = await response;
             const {articles} = await data;
